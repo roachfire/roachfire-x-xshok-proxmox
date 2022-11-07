@@ -262,7 +262,7 @@ deb https://ftp.debian.org/debian ${OS_CODENAME}-updates main contrib
 # non-free
 deb https://httpredir.debian.org/debian/ ${OS_CODENAME} main contrib non-free
 # security updates
-deb https://security.debian.org/debian-security ${OS_CODENAME}/updates main contrib
+deb https://security.debian.org/debian-security ${OS_CODENAME}-security main contrib
 EOF
 
 # Refresh the package lists
@@ -657,7 +657,6 @@ compress
 size=10M
 delaycompress
 copytruncate
-
 include /etc/logrotate.d
 EOF
     systemctl restart logrotate
@@ -859,14 +858,11 @@ if [ "${XS_ZFSARC,,}" == "yes" ] ; then
       fi
       cat <<EOF > /etc/modprobe.d/99-xs-zfsarc.conf
 # eXtremeSHOK.com ZFS tuning
-
 # Use 1/8 RAM for MAX cache, 1/16 RAM for MIN cache, or 1GB
 options zfs zfs_arc_min=$MY_ZFS_ARC_MIN
 options zfs zfs_arc_max=$MY_ZFS_ARC_MAX
-
 # use the prefetch method
 options zfs l2arc_noprefetch=0
-
 # max write speed to l2arc
 # tradeoff between write/read and durability of ssd (?)
 # default : 8 * 1024 * 1024
@@ -903,7 +899,6 @@ vfio
 vfio_iommu_type1
 vfio_pci
 vfio_virqfd
-
 EOF
     cat <<EOF >> /etc/modprobe.d/blacklist.conf
 # eXtremeSHOK.com
@@ -914,7 +909,6 @@ blacklist amdgpu
 blacklist radeon
 blacklist nvidia
 blacklist nvidiafb
-
 EOF
 
 fi
