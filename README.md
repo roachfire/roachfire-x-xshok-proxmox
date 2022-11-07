@@ -59,7 +59,7 @@ https://raw.githubusercontent.com/extremeshok/xshok-proxmox/master/install-post.
 return value is 0
 
 ```
-wget https://raw.githubusercontent.com/extremeshok/xshok-proxmox/master/install-post.sh -c -O install-post.sh && bash install-post.sh && rm install-post.sh
+wget https://raw.githubusercontent.com/roachfire/roachfire-x-xshok-proxmox/master/install-post.sh -c -O install-post.sh && bash install-post.sh && rm install-post.sh
 ```
 
 ##  TO SET AND USE YOUR OWN OPTIONS (using xs-post-install.env)
