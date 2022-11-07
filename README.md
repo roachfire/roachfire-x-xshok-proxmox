@@ -1,7 +1,6 @@
 # xshok-proxmox :: eXtremeSHOK.com Proxmox (pve)
 
-Scripts for working with and optimizing proxmox
-
+Scripts for working with and optimizing proxmox, updated to include a few personal tweaks. Currently, the only thing this fork adds is a correction to the apt soruces added by the command. More will be added as I learn the script more.
 ## Maintained and provided by <https://eXtremeSHOK.com>
 
 ### Please Submit Patches / Pull requests
