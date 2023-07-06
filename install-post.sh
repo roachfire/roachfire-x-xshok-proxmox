@@ -918,9 +918,6 @@ update-initramfs -u -k all
 update-grub
 pve-efiboot-tool refresh
 
-# Install Proxmox dark mode theme from https://github.com/Weilbyte/PVEDiscordDark
-bash <(curl -s https://raw.githubusercontent.com/Weilbyte/PVEDiscordDark/master/PVEDiscordDark.sh ) install
-
 # cleanup
 ## Remove no longer required packages and purge old cached updates
 /usr/bin/env DEBIAN_FRONTEND=noninteractive apt-get -y -o Dpkg::Options::='--force-confdef' autoremove
